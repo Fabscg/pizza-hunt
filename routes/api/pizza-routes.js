@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Pizza } = require('../../models');
-const { addComment, removeComment } = require('../../controllers/comment-controllers')
+const { addComment, removeComment } = require('../../controllers/comment-controller')
 
 
 const {
