@@ -1,4 +1,22 @@
-const { Schema, model } = require('mongoose')
+const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
+
+
+const replyShcmea = new Schema(
+    {
+        replyBody:{
+            type:String
+        },
+        writtenBy: {
+            type:String
+        },
+        createdAt: {
+            type: Date,
+            dafault:Date.now,
+            get: createdAtVal => dateFormat(createdAtVal)
+        }
+    }
+)
 
 const CommentSchema = new Schema ({
     wrritenBy:{
